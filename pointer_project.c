@@ -8,10 +8,9 @@
 void initData();
 int level;
 int arrayFish[6];
-int* cursor;
+int * cursor;
 void printfFishes();
 void decreaseWater(long elapsedTime);
-int checkFishAlive();
 int main(void)
 {
 	long startTime = 0; // 게임시작시간
@@ -61,7 +60,7 @@ int main(void)
 		}
 
 		// 레벨업을 할 건지 확인 (레벨업은 20초 마다 한번씩 수행)
-		if (totalElapsedTime / 20 > (level - 1))
+		if (totalElapsedTime / 20 > level - 1)
 		{
 			level++;
 			printf("*** 축 레벨업 ! 기존 %d 레벨에서 %d 레벨로 업그레이드 ***\n\n", level -1 ,level);
